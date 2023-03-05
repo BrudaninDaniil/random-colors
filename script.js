@@ -26,8 +26,10 @@ function randomColor() {
   for (let i = 0; i < 6; i++) {
     randomLetter = getRandomInt(0, letters.length - 1);
     randomNumber = getRandomInt(0, numbers.length - 1);
+    generatedColor += letters[randomLetter];
+    generatedColor += numbers[randomNumber];
 
-    if (getRandomInt(0, 1) == 0) {
+  if (getRandomInt(0, 1) == 0) {
       generatedColor += letters[randomLetter];
     } else {
       generatedColor += numbers[randomNumber];
@@ -35,4 +37,4 @@ function randomColor() {
   }
 
   return generatedColor;
-};
+}
